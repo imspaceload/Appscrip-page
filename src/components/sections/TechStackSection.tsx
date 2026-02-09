@@ -48,15 +48,16 @@ export default function TechStackSection() {
       id="tech-stack"
       aria-labelledby="tech-stack-heading"
     >
-      <div className="container mx-auto px-6 max-w-[1280px]">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="section-label">Technology</span>
           <h2
             id="tech-stack-heading"
-            className="text-3xl md:text-4xl font-bold text-[var(--color-secondary)] mb-4 leading-tight"
+            className="text-[1.875rem] md:text-[2.25rem] font-bold text-[var(--color-secondary)] leading-[1.2] tracking-[-0.01em] mb-4"
           >
             Technology Stack: Built for Scale and Security
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-[15px] text-[var(--color-gray-600)]">
             Modern, battle-tested technologies powering your logistics platform.
           </p>
         </div>
@@ -64,7 +65,7 @@ export default function TechStackSection() {
         <div className="max-w-4xl mx-auto space-y-8">
           {categories.map((category) => (
             <div key={category.label}>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-3">
+              <h3 className="text-[13px] font-semibold uppercase tracking-wider text-[var(--color-gray-600)] mb-3">
                 {category.label}
               </h3>
               <div className="flex flex-wrap gap-3">
@@ -82,25 +83,15 @@ export default function TechStackSection() {
           ))}
         </div>
 
-        {/* Architecture Image Placeholder */}
+        {/* Architecture Image */}
         <div className="mt-16 max-w-4xl mx-auto">
-          <div className="img-placeholder aspect-[16/7] rounded-2xl">
-            <svg
-              width="64"
-              height="64"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            >
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-              <line x1="8" y1="21" x2="16" y2="21" />
-              <line x1="12" y1="17" x2="12" y2="21" />
-            </svg>
-            <p className="mt-2 text-sm">System Architecture Diagram</p>
-            <p className="text-xs text-gray-400">
-              (Replace with architecture diagram: 1200x525 recommended)
-            </p>
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=525&fit=crop&q=80"
+              alt="Server room representing scalable cloud infrastructure"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

@@ -97,15 +97,16 @@ export default function AdvancedFeaturesSection() {
       id="advanced-features"
       aria-labelledby="advanced-features-heading"
     >
-      <div className="container mx-auto px-6 max-w-[1280px]">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="section-label">Differentiators</span>
           <h2
             id="advanced-features-heading"
-            className="text-3xl md:text-4xl font-bold text-[var(--color-secondary)] mb-4 leading-tight"
+            className="text-[1.875rem] md:text-[2.25rem] font-bold text-[var(--color-secondary)] mb-4 leading-tight"
           >
             Advanced Features That Set Appscrip Apart
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-[15px] text-[var(--color-gray-600)]">
             Go beyond basic logistics with intelligent features built for
             enterprise-scale operations.
           </p>
@@ -120,16 +121,16 @@ export default function AdvancedFeaturesSection() {
                   {feature.icon}
                 </div>
                 <div className="text-right">
-                  <p className="text-lg font-bold text-[var(--color-primary)]">
+                  <p className="text-[15px] font-bold text-[var(--color-primary)]">
                     {feature.stat}
                   </p>
-                  <p className="text-xs text-gray-500">{feature.statLabel}</p>
+                  <p className="text-[13px] text-[var(--color-gray-600)]">{feature.statLabel}</p>
                 </div>
               </div>
               <h3 className="text-lg font-bold text-[var(--color-secondary)] mb-2">
                 {feature.title}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-[15px] text-[var(--color-gray-600)] leading-relaxed">
                 {feature.description}
               </p>
             </article>
@@ -137,7 +138,7 @@ export default function AdvancedFeaturesSection() {
         </div>
 
         {/* Additional Platform Features */}
-        <div className="bg-white rounded-2xl p-8 md:p-10 shadow-md border border-gray-100">
+        <div className="callout rounded-2xl p-8 md:p-10">
           <h3 className="text-xl font-bold text-[var(--color-secondary)] mb-6">
             Additional Platform Features
           </h3>
@@ -157,26 +158,21 @@ export default function AdvancedFeaturesSection() {
                     clipRule="evenodd"
                   />
                 </svg>
-                <p className="text-sm text-gray-700">{feature}</p>
+                <p className="text-[15px] text-[var(--color-gray-600)]">{feature}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Video Placeholder */}
-        <div className="mt-16">
-          <div className="video-placeholder aspect-video max-w-4xl mx-auto rounded-2xl">
-            <div className="play-btn cursor-pointer">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-            <p className="text-gray-300 text-sm z-10">
-              Feature Walkthrough Video Placeholder
-            </p>
-            <p className="text-gray-500 text-xs z-10">
-              (Replace with feature walkthrough video: 1280x720 recommended)
-            </p>
+        {/* YouTube Video Embed */}
+        <div className="mt-16 max-w-4xl mx-auto">
+          <div className="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/6FmE55ooiBQ?rel=0&modestbranding=1"
+              title="Feature Walkthrough Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
         </div>
       </div>

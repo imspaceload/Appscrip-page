@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+/* eslint-disable @next/next/no-img-element */
 
 const faqs = [
   {
@@ -40,39 +41,32 @@ export default function FAQSection() {
       id="faq"
       aria-labelledby="faq-heading"
     >
-      <div className="container mx-auto px-6 max-w-[1280px]">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           {/* Left: Heading */}
           <div className="lg:col-span-2">
+            <span className="section-label">FAQ</span>
             <h2
               id="faq-heading"
-              className="text-3xl md:text-4xl font-bold text-[var(--color-secondary)] mb-4 leading-tight"
+              className="text-[1.875rem] md:text-[2.25rem] font-bold text-[var(--color-secondary)] leading-[1.2] tracking-[-0.01em] mb-4"
             >
               Frequently Searched Questions About Trucking Apps
             </h2>
-            <p className="text-base text-gray-600 mb-6">
+            <p className="text-[15px] text-[var(--color-gray-600)] mb-6">
               Get answers to the most common questions about on-demand trucking
               app development, TMS, and logistics technology.
             </p>
 
-            {/* Image Placeholder */}
-            <div className="img-placeholder aspect-square max-w-[280px] rounded-2xl hidden lg:flex">
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3" />
-                <line x1="12" y1="17" x2="12.01" y2="17" />
-              </svg>
-              <p className="mt-2 text-sm">FAQ Illustration</p>
-              <p className="text-xs text-gray-400">
-                (Replace with illustration: 400x400 recommended)
-              </p>
+            {/* FAQ Image */}
+            <div className="hidden lg:block max-w-[280px] rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=400&fit=crop&q=80"
+                alt="Business consultation for trucking app development"
+                width={400}
+                height={400}
+                className="w-full h-auto rounded-2xl"
+                loading="lazy"
+              />
             </div>
           </div>
 

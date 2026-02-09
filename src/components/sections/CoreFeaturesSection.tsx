@@ -10,7 +10,8 @@ type FeatureTab = {
     title: string;
     items: { name: string; description: string }[];
   }[];
-  imagePlaceholder: string;
+  imageUrl: string;
+  imageAlt: string;
 };
 
 const tabs: FeatureTab[] = [
@@ -52,7 +53,8 @@ const tabs: FeatureTab[] = [
         ],
       },
     ],
-    imagePlaceholder: "Shipper App UI Screenshots",
+    imageUrl: "https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?w=500&h=700&fit=crop&q=80",
+    imageAlt: "Shipper app interface showing load booking dashboard",
   },
   {
     id: "carrier",
@@ -90,7 +92,8 @@ const tabs: FeatureTab[] = [
         ],
       },
     ],
-    imagePlaceholder: "Carrier/Driver App UI Screenshots",
+    imageUrl: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=500&h=700&fit=crop&q=80",
+    imageAlt: "Carrier driver using mobile app for load management",
   },
   {
     id: "fleet",
@@ -115,7 +118,8 @@ const tabs: FeatureTab[] = [
         ],
       },
     ],
-    imagePlaceholder: "Fleet Operator Dashboard Screenshots",
+    imageUrl: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=500&h=700&fit=crop&q=80",
+    imageAlt: "Fleet operator dashboard with vehicle tracking overview",
   },
   {
     id: "dispatcher",
@@ -144,7 +148,8 @@ const tabs: FeatureTab[] = [
         ],
       },
     ],
-    imagePlaceholder: "Dispatcher TMS Panel Screenshots",
+    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=700&fit=crop&q=80",
+    imageAlt: "Dispatcher TMS panel with real-time analytics dashboard",
   },
   {
     id: "admin",
@@ -176,7 +181,8 @@ const tabs: FeatureTab[] = [
         ],
       },
     ],
-    imagePlaceholder: "Admin Console Dashboard Screenshots",
+    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=700&fit=crop&q=80",
+    imageAlt: "Admin console showing platform management analytics",
   },
 ];
 
@@ -190,15 +196,16 @@ export default function CoreFeaturesSection() {
       id="features"
       aria-labelledby="features-heading"
     >
-      <div className="container mx-auto px-6 max-w-[1280px]">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
+          <span className="section-label">Platform Features</span>
           <h2
             id="features-heading"
-            className="text-3xl md:text-4xl font-bold text-[var(--color-secondary)] mb-4 leading-tight"
+            className="text-[1.875rem] md:text-[2.25rem] font-bold text-[var(--color-secondary)] leading-[1.2] tracking-[-0.01em] mb-4"
           >
             Core Features of Enterprise-Grade On-Demand Trucking Apps
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-[15px] text-[var(--color-gray-600)]">
             Every user role gets a purpose-built experience with features
             designed for logistics workflows.
           </p>
@@ -210,7 +217,7 @@ export default function CoreFeaturesSection() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold transition-all border-none cursor-pointer ${
+              className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all border-none cursor-pointer ${
                 activeTab === tab.id
                   ? "bg-[var(--color-primary)] text-white shadow-lg"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
@@ -224,12 +231,12 @@ export default function CoreFeaturesSection() {
         </div>
 
         {/* Tab Content */}
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-5 gap-10">
           {/* Features List */}
           <div className="lg:col-span-3 space-y-8">
             {activeTabData.features.map((group) => (
               <div key={group.title}>
-                <h3 className="text-xl font-bold text-[var(--color-secondary)] mb-4 flex items-center gap-2">
+                <h3 className="text-lg font-bold text-[var(--color-secondary)] mb-4 flex items-center gap-2">
                   <span className="w-1 h-6 bg-[var(--color-primary)] rounded-full inline-block" />
                   {group.title}
                 </h3>
@@ -237,12 +244,12 @@ export default function CoreFeaturesSection() {
                   {group.items.map((item) => (
                     <div
                       key={item.name}
-                      className="p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors border border-transparent hover:border-[var(--color-primary)]/20"
+                      className="bg-white border border-[var(--color-gray-200)] rounded-xl p-4 hover:border-[rgba(67,97,238,0.3)] transition-all"
                     >
                       <h4 className="text-sm font-semibold text-[var(--color-secondary)] mb-1">
                         {item.name}
                       </h4>
-                      <p className="text-xs text-gray-600 leading-relaxed">
+                      <p className="text-[13px] text-[var(--color-gray-600)] leading-relaxed">
                         {item.description}
                       </p>
                     </div>
@@ -252,26 +259,15 @@ export default function CoreFeaturesSection() {
             ))}
           </div>
 
-          {/* Image Placeholder */}
+          {/* Tab Image */}
           <div className="lg:col-span-2">
-            <div className="img-placeholder aspect-[3/4] rounded-2xl sticky top-24">
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              >
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-                <line x1="12" y1="18" x2="12" y2="18" />
-              </svg>
-              <p className="mt-2 text-sm text-center px-4">
-                {activeTabData.imagePlaceholder}
-              </p>
-              <p className="text-xs text-gray-400 text-center px-4">
-                (Replace with actual app screenshots: 600x800 recommended)
-              </p>
+            <div className="sticky top-24 rounded-2xl overflow-hidden shadow-lg aspect-[5/7]">
+              {/* eslint-disable @next/next/no-img-element */}
+              <img
+                src={activeTabData.imageUrl}
+                alt={activeTabData.imageAlt}
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

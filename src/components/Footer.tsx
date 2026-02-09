@@ -29,11 +29,11 @@ export default function Footer() {
     <footer className="bg-[var(--color-secondary)] text-white">
       {/* CTA Banner */}
       <div className="border-b border-white/10">
-        <div className="container mx-auto px-6 max-w-[1280px] py-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="mx-auto max-w-[1200px] px-5 sm:px-8 py-16 text-center">
+          <h2 className="text-[1.875rem] md:text-[2.25rem] font-bold leading-[1.2] tracking-[-0.01em] mb-4">
             Ready to Build Your Trucking Platform?
           </h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-[15px] text-gray-300 mb-8 max-w-2xl mx-auto">
             Schedule a free consultation with our logistics technology experts
             and get a personalized demo of our trucking app solution.
           </p>
@@ -52,7 +52,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Links */}
-      <div className="container mx-auto px-6 max-w-[1280px] py-16">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand Column */}
           <div>
@@ -65,7 +65,7 @@ export default function Footer() {
               </div>
               <span className="text-xl font-bold text-white">appscrip</span>
             </Link>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+            <p className="text-gray-400 text-[14px] leading-relaxed mb-6">
               Appscrip empowers startups and enterprises worldwide with
               innovative software solutions designed for growth. Cut development
               costs by 60% and launch in under 90 days.
@@ -110,7 +110,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
+            <h3 className="text-[13px] font-semibold uppercase tracking-wider text-gray-400 mb-4">
               Products
             </h3>
             <ul className="list-none m-0 p-0 space-y-3">
@@ -118,7 +118,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-300 hover:text-white transition-colors no-underline"
+                    className="text-[14px] text-gray-300 hover:text-white transition-colors no-underline"
                   >
                     {link.label}
                   </Link>
@@ -129,7 +129,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
+            <h3 className="text-[13px] font-semibold uppercase tracking-wider text-gray-400 mb-4">
               Company
             </h3>
             <ul className="list-none m-0 p-0 space-y-3">
@@ -137,7 +137,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-300 hover:text-white transition-colors no-underline"
+                    className="text-[14px] text-gray-300 hover:text-white transition-colors no-underline"
                   >
                     {link.label}
                   </Link>
@@ -148,7 +148,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
+            <h3 className="text-[13px] font-semibold uppercase tracking-wider text-gray-400 mb-4">
               Resources
             </h3>
             <ul className="list-none m-0 p-0 space-y-3">
@@ -156,7 +156,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-300 hover:text-white transition-colors no-underline"
+                    className="text-[14px] text-gray-300 hover:text-white transition-colors no-underline"
                   >
                     {link.label}
                   </Link>
@@ -166,12 +166,12 @@ export default function Footer() {
 
             {/* Contact */}
             <div className="mt-8">
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">
+              <h3 className="text-[13px] font-semibold uppercase tracking-wider text-gray-400 mb-4">
                 Contact
               </h3>
               <a
                 href="mailto:sales@appscrip.com"
-                className="text-sm text-gray-300 hover:text-white transition-colors no-underline"
+                className="text-[14px] text-gray-300 hover:text-white transition-colors no-underline"
               >
                 sales@appscrip.com
               </a>
@@ -182,21 +182,21 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="container mx-auto px-6 max-w-[1280px] py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-400">
+        <div className="mx-auto max-w-[1200px] px-5 sm:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-[13px] text-gray-400">
             &copy; 2011&ndash;{new Date().getFullYear()} Appscrip. All rights
             reserved.
           </p>
           <div className="flex gap-6">
             <Link
               href="https://appscrip.com/privacy-policy/"
-              className="text-sm text-gray-400 hover:text-white transition-colors no-underline"
+              className="text-[13px] text-gray-400 hover:text-white transition-colors no-underline"
             >
               Privacy Policy
             </Link>
             <Link
               href="https://appscrip.com/terms-of-service/"
-              className="text-sm text-gray-400 hover:text-white transition-colors no-underline"
+              className="text-[13px] text-gray-400 hover:text-white transition-colors no-underline"
             >
               Terms of Service
             </Link>

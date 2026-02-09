@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://appscrip.com"),
   title: "On-Demand Trucking App Development | Appscrip",
   description:
     "Build custom on-demand trucking apps for B2B logistics. White-label solutions with real-time tracking, route optimization & TMS.",

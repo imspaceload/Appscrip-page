@@ -31,6 +31,8 @@ export default function ProcessSection() {
       ],
       cta: "See Our Design Process",
       ctaLink: "#demo",
+      imageUrl: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&h=450&fit=crop&q=80",
+      imageAlt: "Design and development process with wireframes and prototypes",
     },
     {
       step: 3,
@@ -61,6 +63,8 @@ export default function ProcessSection() {
       ],
       cta: "Get Ready to Launch",
       ctaLink: "#demo",
+      imageUrl: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=450&fit=crop&q=80",
+      imageAlt: "Development team collaborating on deployment and launch",
     },
     {
       step: 5,
@@ -85,15 +89,16 @@ export default function ProcessSection() {
       id="process"
       aria-labelledby="process-heading"
     >
-      <div className="container mx-auto px-6 max-w-[1280px]">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="section-label">Our Process</span>
           <h2
             id="process-heading"
-            className="text-3xl md:text-4xl font-bold text-[var(--color-secondary)] mb-4 leading-tight"
+            className="text-[1.875rem] md:text-[2.25rem] font-bold text-[var(--color-secondary)] leading-[1.2] tracking-[-0.01em] mb-4"
           >
             How On-Demand Trucking App Development Works: The Appscrip Process
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-[15px] text-[var(--color-gray-600)]">
             From discovery to launch in as little as 11 weeks — here&apos;s our
             proven development process.
           </p>
@@ -109,28 +114,28 @@ export default function ProcessSection() {
             >
               {/* Timeline Line */}
               <div className="flex flex-col items-center shrink-0">
-                <div className="w-14 h-14 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center font-bold text-lg shadow-lg z-10">
+                <div className="w-12 h-12 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center font-bold text-base shadow-lg z-10">
                   {step.step}
                 </div>
                 {index < steps.length - 1 && (
-                  <div className="w-0.5 flex-1 bg-[var(--color-primary)]/20 mt-2" />
+                  <div className="w-px flex-1 bg-[var(--color-primary)]/20 mt-2" />
                 )}
               </div>
 
               {/* Content */}
               <div className="flex-1 pb-2">
                 <div className="flex flex-wrap items-center gap-3 mb-2">
-                  <h3 className="text-xl font-bold text-[var(--color-secondary)]">
+                  <h3 className="text-lg font-bold text-[var(--color-secondary)]">
                     {step.title}
                   </h3>
-                  <span className="px-3 py-1 bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-xs font-semibold rounded-full">
+                  <span className="px-3 py-1 bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-[13px] font-semibold rounded-full">
                     {step.timeline}
                   </span>
                 </div>
-                <p className="text-sm text-gray-700 mb-3">{step.description}</p>
+                <p className="text-[15px] text-[var(--color-gray-600)] mb-3">{step.description}</p>
                 <ul className="space-y-2 mb-4 list-none m-0 p-0">
                   {step.items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                    <li key={i} className="flex items-start gap-2 text-[13px] text-[var(--color-gray-600)]">
                       <svg
                         width="16"
                         height="16"
@@ -162,25 +167,15 @@ export default function ProcessSection() {
                   </svg>
                 </Link>
 
-                {/* Image placeholder for design/development step */}
-                {step.step === 2 && (
-                  <div className="mt-6 img-placeholder aspect-video rounded-xl max-w-lg">
-                    <svg
-                      width="48"
-                      height="48"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    >
-                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                      <circle cx="8.5" cy="8.5" r="1.5" />
-                      <polyline points="21 15 16 10 5 21" />
-                    </svg>
-                    <p className="mt-2 text-sm">Design Process Illustration</p>
-                    <p className="text-xs text-gray-400">
-                      (Replace with design process image: 800x450 recommended)
-                    </p>
+                {/* Step images */}
+                {step.imageUrl && (
+                  <div className="mt-6 max-w-lg rounded-2xl overflow-hidden shadow-lg">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={step.imageUrl}
+                      alt={step.imageAlt}
+                      className="w-full h-auto object-cover aspect-video"
+                    />
                   </div>
                 )}
               </div>

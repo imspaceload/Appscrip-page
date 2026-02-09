@@ -35,8 +35,8 @@ export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-      <nav className="container mx-auto px-6 max-w-[1280px]" aria-label="Main navigation">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-[var(--color-gray-100)]">
+      <nav className="mx-auto max-w-[1200px] px-5 sm:px-8" aria-label="Main navigation">
         <div className="flex items-center justify-between h-[72px]">
           {/* Logo */}
           <Link
@@ -44,7 +44,6 @@ export default function Header() {
             className="flex items-center gap-2 no-underline"
             aria-label="Appscrip - Home"
           >
-            {/* Logo placeholder - replace with actual Appscrip logo */}
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-lg bg-[var(--color-primary)] flex items-center justify-center">
                 <span className="text-white font-bold text-lg">A</span>
@@ -68,7 +67,7 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className="px-4 py-2 text-[0.9375rem] font-medium text-gray-700 hover:text-[var(--color-primary)] transition-colors no-underline rounded-lg hover:bg-gray-50 flex items-center gap-1"
+                  className="px-4 py-2 text-[14px] font-medium text-[var(--color-gray-700)] hover:text-[var(--color-primary)] transition-colors no-underline rounded-lg hover:bg-gray-50 flex items-center gap-1"
                 >
                   {item.label}
                   {item.children && (
@@ -94,12 +93,12 @@ export default function Header() {
 
                 {/* Dropdown Menu */}
                 {item.children && openDropdown === item.label && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-50">
+                  <div className="absolute top-full left-0 mt-1 bg-white rounded-xl shadow-xl border border-[var(--color-gray-100)] py-2 min-w-[240px] z-50">
                     {item.children.map((child) => (
                       <Link
                         key={child.label}
                         href={child.href}
-                        className="block px-4 py-2.5 text-sm text-gray-700 hover:text-[var(--color-primary)] hover:bg-gray-50 no-underline transition-colors"
+                        className="block px-4 py-2.5 text-[14px] text-[var(--color-gray-700)] hover:text-[var(--color-primary)] hover:bg-gray-50 no-underline transition-colors"
                       >
                         {child.label}
                       </Link>
@@ -112,7 +111,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link href="#demo" className="btn-primary text-sm">
+            <Link href="#demo" className="btn-primary text-[13px] px-5 py-2.5">
               Get Free Demo
             </Link>
           </div>
@@ -152,13 +151,13 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-gray-100 py-4">
+          <div className="lg:hidden border-t border-[var(--color-gray-100)] py-4">
             <ul className="list-none m-0 p-0 space-y-1">
               {navItems.map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-[var(--color-primary)] hover:bg-gray-50 rounded-lg no-underline transition-colors"
+                    className="block px-4 py-3 text-[15px] font-medium text-[var(--color-gray-700)] hover:text-[var(--color-primary)] hover:bg-gray-50 rounded-lg no-underline transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.label}
@@ -169,7 +168,7 @@ export default function Header() {
                         <li key={child.label}>
                           <Link
                             href={child.href}
-                            className="block px-4 py-2 text-sm text-gray-600 hover:text-[var(--color-primary)] no-underline transition-colors"
+                            className="block px-4 py-2 text-[14px] text-[var(--color-gray-600)] hover:text-[var(--color-primary)] no-underline transition-colors"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {child.label}
@@ -182,7 +181,7 @@ export default function Header() {
               ))}
             </ul>
             <div className="mt-4 px-4">
-              <Link href="#demo" className="btn-primary w-full text-center text-sm">
+              <Link href="#demo" className="btn-primary w-full text-center text-[13px] px-5 py-2.5">
                 Get Free Demo
               </Link>
             </div>

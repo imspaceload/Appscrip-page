@@ -7,17 +7,17 @@ export default function DemoFormSection() {
       id="demo"
       aria-labelledby="demo-heading"
     >
-      <div className="container mx-auto px-6 max-w-[1280px]">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Content */}
           <div>
             <h2
               id="demo-heading"
-              className="text-3xl md:text-4xl font-bold mb-4 leading-tight"
+              className="text-[1.875rem] md:text-[2.25rem] font-bold mb-4 leading-[1.2] tracking-[-0.01em]"
             >
               Get Your Free Demo &amp; Consultation
             </h2>
-            <p className="text-lg text-gray-300 mb-8">
+            <p className="text-[15px] text-gray-300 mb-8">
               See Appscrip&apos;s on-demand trucking platform in action.
               Schedule a free 15-minute consultation with our logistics
               technology experts.
@@ -45,33 +45,28 @@ export default function DemoFormSection() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <span className="text-sm text-gray-300">{item}</span>
+                  <span className="text-[15px] text-gray-300">{item}</span>
                 </div>
               ))}
             </div>
 
-            {/* Video Placeholder */}
-            <div className="video-placeholder aspect-video max-w-md rounded-xl">
-              <div className="play-btn cursor-pointer" style={{ width: 60, height: 60 }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-              <p className="text-gray-300 text-xs z-10">
-                Client Testimonial Video Placeholder
-              </p>
-              <p className="text-gray-500 text-xs z-10">
-                (Replace with testimonial video: 640x360 recommended)
-              </p>
+            {/* YouTube Embed */}
+            <div className="video-embed aspect-video max-w-md rounded-xl overflow-hidden">
+              <iframe
+                src="https://www.youtube.com/embed/6FmE55ooiBQ?rel=0&modestbranding=1"
+                title="Client Testimonial Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           </div>
 
           {/* Right: Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-2xl">
+          <div className="bg-white rounded-2xl p-8 md:p-10 shadow-2xl">
             <h3 className="text-xl font-bold text-[var(--color-secondary)] mb-2">
               Schedule Your Free Demo
             </h3>
-            <p className="text-sm text-gray-500 mb-6">
+            <p className="text-[13px] text-[var(--color-gray-600)] mb-6">
               Fill out the form and our team will get back to you within 24
               hours.
             </p>
@@ -84,7 +79,7 @@ export default function DemoFormSection() {
               <div>
                 <label
                   htmlFor="fullName"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-[13px] font-semibold text-[var(--color-gray-700)] mb-1"
                 >
                   Full Name *
                 </label>
@@ -94,14 +89,14 @@ export default function DemoFormSection() {
                   name="fullName"
                   required
                   placeholder="John Doe"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-gray-800 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-[var(--color-gray-200)] rounded-xl text-[15px] text-[var(--color-gray-800)] focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent outline-none transition-all"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-[13px] font-semibold text-[var(--color-gray-700)] mb-1"
                 >
                   Business Email *
                 </label>
@@ -111,14 +106,14 @@ export default function DemoFormSection() {
                   name="email"
                   required
                   placeholder="john@company.com"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-gray-800 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-[var(--color-gray-200)] rounded-xl text-[15px] text-[var(--color-gray-800)] focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent outline-none transition-all"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-[13px] font-semibold text-[var(--color-gray-700)] mb-1"
                 >
                   Phone Number
                 </label>
@@ -127,14 +122,14 @@ export default function DemoFormSection() {
                   id="phone"
                   name="phone"
                   placeholder="+1 (555) 000-0000"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-gray-800 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-[var(--color-gray-200)] rounded-xl text-[15px] text-[var(--color-gray-800)] focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent outline-none transition-all"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="company"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-[13px] font-semibold text-[var(--color-gray-700)] mb-1"
                 >
                   Company Name *
                 </label>
@@ -144,14 +139,14 @@ export default function DemoFormSection() {
                   name="company"
                   required
                   placeholder="Your Company"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-gray-800 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-[var(--color-gray-200)] rounded-xl text-[15px] text-[var(--color-gray-800)] focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent outline-none transition-all"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="solution"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-[13px] font-semibold text-[var(--color-gray-700)] mb-1"
                 >
                   Interested In *
                 </label>
@@ -159,7 +154,7 @@ export default function DemoFormSection() {
                   id="solution"
                   name="solution"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-gray-800 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent outline-none transition-all bg-white"
+                  className="w-full px-4 py-3 border border-[var(--color-gray-200)] rounded-xl text-[15px] text-[var(--color-gray-800)] focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent outline-none transition-all bg-white"
                 >
                   <option value="">Select a solution</option>
                   <option value="white-label">
@@ -178,7 +173,7 @@ export default function DemoFormSection() {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-[13px] font-semibold text-[var(--color-gray-700)] mb-1"
                 >
                   Tell us about your project
                 </label>
@@ -187,7 +182,7 @@ export default function DemoFormSection() {
                   name="message"
                   rows={3}
                   placeholder="Describe your logistics business and what you're looking to build..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm text-gray-800 focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 border border-[var(--color-gray-200)] rounded-xl text-[15px] text-[var(--color-gray-800)] focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent outline-none transition-all resize-none"
                 />
               </div>
 
@@ -209,7 +204,7 @@ export default function DemoFormSection() {
                 </svg>
               </button>
 
-              <p className="text-xs text-gray-400 text-center">
+              <p className="text-[13px] text-[var(--color-gray-600)] text-center">
                 By submitting this form, you agree to our{" "}
                 <Link
                   href="https://appscrip.com/privacy-policy/"

@@ -106,15 +106,16 @@ export default function WhyChooseSection() {
       id="why-choose"
       aria-labelledby="why-choose-heading"
     >
-      <div className="container mx-auto px-6 max-w-[1280px]">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="section-label">Why Appscrip</span>
           <h2
             id="why-choose-heading"
-            className="text-3xl md:text-4xl font-bold text-[var(--color-secondary)] mb-4 leading-tight"
+            className="text-[1.875rem] md:text-[2.25rem] font-bold text-[var(--color-secondary)] leading-[1.2] tracking-[-0.01em] mb-4"
           >
             Why Choose Appscrip for Trucking App Development?
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-[15px] text-[var(--color-gray-600)]">
             Seven reasons logistics companies trust Appscrip to build their
             technology platforms.
           </p>
@@ -124,7 +125,7 @@ export default function WhyChooseSection() {
           {reasons.map((reason) => (
             <article
               key={reason.number}
-              className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+              className="bg-white rounded-2xl p-6 md:p-8 border border-[var(--color-gray-200)] hover:border-[rgba(67,97,238,0.2)] transition-all hover:shadow-lg"
             >
               <div className="flex gap-5">
                 <div className="w-14 h-14 rounded-2xl bg-[var(--color-primary)]/10 text-[var(--color-primary)] flex items-center justify-center shrink-0">
@@ -132,7 +133,7 @@ export default function WhyChooseSection() {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs font-bold text-[var(--color-primary)]">
+                    <span className="text-[13px] font-bold text-[var(--color-primary)]">
                       {reason.number}
                     </span>
                     <h3 className="text-xl font-bold text-[var(--color-secondary)]">
@@ -141,7 +142,7 @@ export default function WhyChooseSection() {
                   </div>
 
                   {reason.description && (
-                    <p className="text-sm text-gray-600 leading-relaxed">
+                    <p className="text-[15px] text-[var(--color-gray-600)] leading-relaxed">
                       {reason.description}
                     </p>
                   )}
@@ -156,7 +157,7 @@ export default function WhyChooseSection() {
                           <p className="text-xl font-bold text-[var(--color-primary)]">
                             {stat.value}
                           </p>
-                          <p className="text-xs text-gray-500">{stat.label}</p>
+                          <p className="text-[13px] text-[var(--color-gray-600)]">{stat.label}</p>
                         </div>
                       ))}
                     </div>
@@ -167,7 +168,7 @@ export default function WhyChooseSection() {
                       {reason.items.map((item, i) => (
                         <li
                           key={i}
-                          className="flex items-start gap-2 text-sm text-gray-600"
+                          className="flex items-start gap-2 text-[15px] text-[var(--color-gray-600)]"
                         >
                           <svg
                             width="14"
@@ -189,14 +190,16 @@ export default function WhyChooseSection() {
           ))}
         </div>
 
-        {/* Logos / Trust Badges Placeholder */}
+        {/* Team Image */}
         <div className="mt-16 text-center">
-          <p className="text-sm text-gray-500 mb-6">Trusted by logistics companies worldwide</p>
-          <div className="img-placeholder h-24 max-w-3xl mx-auto rounded-xl">
-            <p className="text-sm">Client Logo Carousel Placeholder</p>
-            <p className="text-xs text-gray-400">
-              (Replace with client logos: 6-8 logos recommended)
-            </p>
+          <p className="text-[13px] text-[var(--color-gray-600)] mb-6">Trusted by logistics companies worldwide</p>
+          <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&h=200&fit=crop&q=80"
+              alt="Appscrip engineering team"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
